@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5Leq1kAOBVBW7gq1isCgBBtcxDKqpdEDwLS0oT8mCFA=",
+  "Hash": "yaPMfV5i13eV2jBxABc9taRa0EgaNYnZhIolGBc4QSc=",
   "Source": "CalendarApp",
   "BasePath": "_content/CalendarApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CalendarApp/wwwroot",
       "Source": "CalendarApp",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/scopedcss/bundle/CalendarApp.styles.css",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/obj/Debug/net7.0/scopedcss/bundle/CalendarApp.styles.css",
       "SourceId": "CalendarApp",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/scopedcss/bundle/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/obj/Debug/net7.0/scopedcss/bundle/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "CalendarApp.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/scopedcss/bundle/CalendarApp.styles.css"
+      "OriginalItemSpec": "/Users/nr/Desktop/untitled folder 2/CalendarApp/obj/Debug/net7.0/scopedcss/bundle/CalendarApp.styles.css"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/scopedcss/projectbundle/CalendarApp.bundle.scp.css",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/obj/Debug/net7.0/scopedcss/projectbundle/CalendarApp.bundle.scp.css",
       "SourceId": "CalendarApp",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/scopedcss/projectbundle/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/obj/Debug/net7.0/scopedcss/projectbundle/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "CalendarApp.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/scopedcss/projectbundle/CalendarApp.bundle.scp.css"
+      "OriginalItemSpec": "/Users/nr/Desktop/untitled folder 2/CalendarApp/obj/Debug/net7.0/scopedcss/projectbundle/CalendarApp.bundle.scp.css"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/bootstrap/bootstrap.min.css",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/bootstrap/bootstrap.min.css",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/bootstrap/bootstrap.min.css.map",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/open-iconic/FONT-LICENSE",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/open-iconic/FONT-LICENSE",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/FONT-LICENSE"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.eot"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.otf"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.svg"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.ttf"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.woff"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/open-iconic/ICON-LICENSE",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/open-iconic/ICON-LICENSE",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/ICON-LICENSE"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/open-iconic/README.md",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/open-iconic/README.md",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/README.md"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/css/site.css",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/css/site.css",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/favicon.png",
+      "Identity": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/favicon.png",
       "SourceId": "CalendarApp",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/nr/Projects/CalendarApp/CalendarApp/wwwroot/",
+      "ContentRoot": "/Users/nr/Desktop/untitled folder 2/CalendarApp/wwwroot/",
       "BasePath": "_content/CalendarApp",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
