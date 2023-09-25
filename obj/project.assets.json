@@ -683,11 +683,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nr/Projects/CalendarApp/CalendarApp/CalendarApp.csproj",
+      "projectUniqueName": "/Users/nr/Desktop/untitled folder 2/CalendarApp/CalendarApp.csproj",
       "projectName": "CalendarApp",
-      "projectPath": "/Users/nr/Projects/CalendarApp/CalendarApp/CalendarApp.csproj",
+      "projectPath": "/Users/nr/Desktop/untitled folder 2/CalendarApp/CalendarApp.csproj",
       "packagesPath": "/Users/nr/.nuget/packages/",
-      "outputPath": "/Users/nr/Projects/CalendarApp/CalendarApp/obj/",
+      "outputPath": "/Users/nr/Desktop/untitled folder 2/CalendarApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nr/.nuget/NuGet/NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sjQCjXx+AyXjUXH5rOvWk0mckTABr2h4Gvm0icgtgJVbMy0Q6321N0c9DcwKypWyeTjyQ2V8lpaGYSNjy4d7ZQ==",
+  "dgSpecHash": "zoztnXQnn5pW/D0AFqkhy6tLq1AGtIXx6iZegxCZKpr232mywWQ94iCjWCvkeH2+uN6Ndk0p63Vcb9u8bzcKlg==",
   "success": true,
-  "projectFilePath": "/Users/nr/Projects/CalendarApp/CalendarApp/CalendarApp.csproj",
+  "projectFilePath": "/Users/nr/Desktop/untitled folder 2/CalendarApp/CalendarApp.csproj",
   "expectedPackageFiles": [
     "/Users/nr/.nuget/packages/google.apis/1.62.0/google.apis.1.62.0.nupkg.sha512",
     "/Users/nr/.nuget/packages/google.apis.auth/1.62.0/google.apis.auth.1.62.0.nupkg.sha512",
