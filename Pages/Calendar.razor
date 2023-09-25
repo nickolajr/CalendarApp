@@ -1,0 +1,97 @@
+﻿@page "/"
+@using CalendarApp.Classes
+@inject IJSRuntime JSRuntime
+
+<tr>Add Birthday</tr>
+<div class="form-group">
+    <input id="FName" placeholder="First Name" @bind="person.FName" />
+    <input id="LName" placeholder="Last Name" @bind="person.Lname" />
+    <input id="Birthday" type="date" @bind="person.Birthday" />
+</div>
+<button @onclick="UpdatePerson">Update Person</button>
+<h1 class="H">Holidays in the Next 7 Days</h1>
+<table class="Table">
+    <thead class="Thead">
+        <tr>
+            <th>Dayname and Date</th>
+            <th>Event</th>
+        </tr>
+    </thead>
+    <tbody class="Tbody">
+        @for (int days = 0; days <= 6; days++)
+        {
+            <tr>
+                <td>@date.currentdate.AddDays(days).ToLongDateString()</td>
+                @foreach (var holiday in holidays)
+                {
+                    DateTime eventday = holiday.Start.Date; 
+                    DateTime currentDay = date.currentdate.AddDays(days).Date; 
+                    if (eventday == currentDay)
+                    {
+                        <td>@holiday.Event</td>
+                    }
+                }
+                @foreach (var birthday in Birthdays)
+                {
+
+                    DateTime Bday = birthday.Birthday.Date; 
+                    DateTime currentDay = date.currentdate.AddDays(days).Date; 
+                    if (Bday.Month == currentDay.Month&&Bday.Day==currentDay.Day)
+                    {
+                        <td>@birthday.FName @birthday.Lname's Birthday. </td>
+                    }
+
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+
+    string FName;
+    string Lname;
+    DateTime Bday;
+    int Pid;
+    Date date = new Date();
+    Api apis = new Api();
+    Sql sql = new Sql();
+    Person person = new Person();
+
+    private void UpdatePerson()
+    {
+        sql.SqlAdd(person);
+        LoadBirthdays(); 
+    }
+
+
+
+
+
+    private List<Person> Birthdays = new List<Person>();
+    private List<Holiday> holidays = new List<Holiday>();
+    private bool holidaysLoaded = false;
+    private bool BirthdaysLoaded = false;
+    protected override async Task OnInitializedAsync()
+    {
+        if (!BirthdaysLoaded)
+        {
+            await LoadBirthdays();
+            BirthdaysLoaded = true;
+        }
+        if (!holidaysLoaded)
+        {
+            await LoadHolidays();
+            holidaysLoaded = true;
+        }
+    }
+
+    private async Task LoadHolidays()
+    {
+        holidays = await Api.GetHolidays();
+    }
+    private async Task LoadBirthdays()
+    {
+        Birthdays = await Sql.SqlSelect();
+    }
+}

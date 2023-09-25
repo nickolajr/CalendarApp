@@ -1,0 +1,44 @@
+﻿@page "/delete"
+
+<PageTitle>delete person</PageTitle>
+
+<h1>Delete Person via Id</h1>
+
+<label for="Id">Id</label>
+<input id="Id" class="form-control" @bind="person.Id" />
+<button @onclick="delete">Delete Person</button>
+<table class="Table">
+    <tbody class="Tbody">
+        @foreach (var birthday in Birthdays)
+        {
+            <tr>
+                <td>@birthday.Id</td>
+                <td>@birthday.FName</td>
+                <td>@birthday.Lname</td>
+                <td>@birthday.Birthday.Date.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    Sql sql = new Sql();
+    Person person = new Person();
+    private List<Person> Birthdays = new List<Person>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadBirthdays();
+    }
+
+    private async Task LoadBirthdays()
+    {
+        Birthdays = await Sql.SqlSelect();
+    }
+    
+    private void delete()
+    {
+        sql.SqlDel(person);
+        LoadBirthdays();
+    }
+}

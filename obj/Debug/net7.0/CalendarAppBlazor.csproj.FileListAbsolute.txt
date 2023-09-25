@@ -1,0 +1,8 @@
+/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/CalendarAppBlazor.csproj.AssemblyReference.cache
+/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/CalendarAppBlazor.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/CalendarAppBlazor.AssemblyInfoInputs.cache
+/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/CalendarAppBlazor.AssemblyInfo.cs
+/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/CalendarAppBlazor.csproj.CoreCompileInputs.cache
+/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/CalendarAppBlazor.MvcApplicationPartsAssemblyInfo.cache
+/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/CalendarAppBlazor.RazorAssemblyInfo.cache
+/Users/nr/Projects/CalendarApp/CalendarApp/obj/Debug/net7.0/CalendarAppBlazor.RazorAssemblyInfo.cs
