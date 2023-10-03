@@ -17,7 +17,7 @@ namespace CalendarApp
 
                 using (SqlCommand sql_cmnd = new SqlCommand("AddPerson", con))
                 {
-                    sql_cmnd.CommandType = CommandType.StoredProcedure;
+                    sql_cmnd.CommandType = CommandType.StoredProcedure; 
                     sql_cmnd.Parameters.AddWithValue("@FName", person.FName);
                     sql_cmnd.Parameters.AddWithValue("@LName", person.Lname);
                     sql_cmnd.Parameters.AddWithValue("@Birthday", person.Birthday);
@@ -77,6 +77,25 @@ namespace CalendarApp
             
             
 
+
+        }
+        public void SqlUpdate(Person person)
+        {
+            using (SqlConnection con = new SqlConnection("Data Source = 192.168.23.113, 1433; Initial Catalog = test; Persist Security Info = True; User ID = Admin; Password = Passw0rd"))
+            {
+                con.Open();
+
+                using (SqlCommand sql_cmnd = new SqlCommand("UpdatePerson", con))
+                {
+                    sql_cmnd.CommandType = CommandType.StoredProcedure;
+                    sql_cmnd.Parameters.AddWithValue("@Id", person.Id);
+                    sql_cmnd.Parameters.AddWithValue("@FName", person.FName);
+                    sql_cmnd.Parameters.AddWithValue("@LName", person.Lname);
+                    sql_cmnd.Parameters.AddWithValue("@Birthday", person.Birthday);
+
+                    sql_cmnd.ExecuteNonQuery();
+                }
+            }
 
         }
     }
