@@ -37,7 +37,7 @@
           }
         }
       },
-      "Google.Apis.Calendar.v3/1.62.0.3137": {
+      "Google.Apis.Calendar.v3/1.62.0.3171": {
         "type": "package",
         "dependencies": {
           "Google.Apis": "1.62.0",
@@ -283,16 +283,16 @@
         "lib/netstandard2.0/Google.Apis.Auth.xml"
       ]
     },
-    "Google.Apis.Calendar.v3/1.62.0.3137": {
-      "sha512": "jeAaBTzGGYFue7ml32rCG4AmqJNeqop+40NT2lIvmlL3xY3/BGeFMtzhqZitep8CxOH+mULz6mVCyXAC5Lp+RA==",
+    "Google.Apis.Calendar.v3/1.62.0.3171": {
+      "sha512": "BqThhMt6eNne1S1qO6HCjoGwtrs4zeCnbhkLgVYEjzXB8NvlpGu9v8TbhBc7c+BF042p3syGYqo4jobKHk+vQg==",
       "type": "package",
-      "path": "google.apis.calendar.v3/1.62.0.3137",
+      "path": "google.apis.calendar.v3/1.62.0.3171",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "NuGetIcon.png",
-        "google.apis.calendar.v3.1.62.0.3137.nupkg.sha512",
+        "google.apis.calendar.v3.1.62.0.3171.nupkg.sha512",
         "google.apis.calendar.v3.nuspec",
         "lib/net45/Google.Apis.Calendar.v3.dll",
         "lib/net45/Google.Apis.Calendar.v3.pdb",
@@ -673,7 +673,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Google.Apis.Calendar.v3 >= 1.62.0.3137",
+      "Google.Apis.Calendar.v3 >= 1.62.0.3171",
       "System.Data.SqlClient >= 4.8.5"
     ]
   },
@@ -717,7 +717,7 @@
         "dependencies": {
           "Google.Apis.Calendar.v3": {
             "target": "Package",
-            "version": "[1.62.0.3137, )"
+            "version": "[1.62.0.3171, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",

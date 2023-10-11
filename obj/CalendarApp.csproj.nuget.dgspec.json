@@ -41,7 +41,7 @@
           "dependencies": {
             "Google.Apis.Calendar.v3": {
               "target": "Package",
-              "version": "[1.62.0.3137, )"
+              "version": "[1.62.0.3171, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",

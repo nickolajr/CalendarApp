@@ -32,6 +32,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/nr/Desktop/untitled folder 2/CalendarApp/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nr/Desktop/untitled folder 2/CalendarApp/Pages/SignUp.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2lnblVwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/nr/Desktop/untitled folder 2/CalendarApp/Pages/WorkLog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvV29ya0xvZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/nr/Desktop/untitled folder 2/CalendarApp/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

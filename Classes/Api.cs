@@ -34,7 +34,7 @@ namespace CalendarApp.Classes
                 DateTime currentDate = now.AddDays(test);
                 var request = service.Events.List(CalendarId);
                 request.TimeMin = currentDate.Date;
-                request.TimeMax = currentDate.Date.AddDays(days);
+                request.TimeMax = currentDate.Date.AddDays(days); 
                 request.Fields = "items(summary,start,end)";
 
                 try

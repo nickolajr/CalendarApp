@@ -1,0 +1,165 @@
+﻿@page "/Login"
+@using System.Data.SqlClient
+@using System.Data
+@using System.Text.Json
+@using CalendarApp.Classes
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavMan
+
+<h3>Login</h3>
+
+@if (!isLoggedIn)
+{
+    <form>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" @bind="username" />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" @bind="password" />
+        </div>
+        <button type="button" class="btn btn-primary" @onclick="HLogin">Login</button>
+        <button type="button" class="btn btn-primary" @onclick="Signup">SignUp</button>
+    </form>
+}
+else
+{
+    <p>You are logged in as @username.</p>
+    <button class="btn btn-danger" @onclick="Logout">Logout</button>
+}
+
+@code {
+    private int AccId;
+    private string username;
+    private int Id;
+    private string password;
+    private bool isLoggedIn;
+    private void Signup()
+    {
+        NavMan.NavigateTo("/SignUp");
+    }
+    private async Task HLogin()
+    {
+
+        bool isAuthenticated = await AuthenticateUser(username, password);
+
+        if (isAuthenticated)
+        {
+            isLoggedIn = true;
+
+            // Store the login status and username in session storage.
+            await JSRuntime.InvokeVoidAsync("sessionStorage.setItem", "isLoggedIn", true);
+            await JSRuntime.InvokeVoidAsync("sessionStorage.setItem", "username", username);
+            //test1();
+
+            NavMan.NavigateTo("/WorkLog");
+        }
+        else
+        {
+            // Authentication failed, handle it appropriately
+            // For example, display an error message
+            // Clear the form fields
+            username = "";
+            password = "";
+        }
+    }
+
+    private async Task Logout()
+    {
+        isLoggedIn = false;
+        username = "";
+
+        // Remove the login status and username from session storage.
+        await JSRuntime.InvokeVoidAsync("sessionStorage.removeItem", "isLoggedIn");
+        await JSRuntime.InvokeVoidAsync("sessionStorage.removeItem", "username");
+        await JSRuntime.InvokeVoidAsync("sessionStorage.removeItem", "Id", Id);
+    }
+   //private async Task test1()
+    //{
+      //  int accId;
+        //string connectionString = "Data Source=SKAB2-PC1;Initial Catalog=NonLonelySim;Integrated Security=True;TrustServerCertificate=True;";
+        //using (SqlConnection connection = new SqlConnection(connectionString))
+        //{
+         //   connection.Open();
+
+  //          using (SqlCommand cmd = new SqlCommand())
+    //        {
+    //
+      //          cmd.Connection = connection;
+        //        SqlCommand sql_cmnd = new SqlCommand("GetProfileId", connection);
+          //      sql_cmnd.CommandType = CommandType.StoredProcedure;
+          //
+            //    sql_cmnd.Parameters.AddWithValue("@UserName", username);
+            //
+              //  var resultId = int.Parse(sql_cmnd.ExecuteScalar().ToString());
+
+//                if (resultId != null)
+  //              {
+   //                 accId = Convert.ToInt32(resultId);
+         //               AccId = accId;
+           //             await JSRuntime.InvokeVoidAsync("sesionStorage.setItem", "Id", accId);
+             //   }
+
+
+
+                // Parse the JSON value to extract the user ID
+
+
+
+
+    //        }
+
+        //    connection.Close();
+        //}
+   // }
+    private async Task<bool> AuthenticateUser(string username, string password)
+    {
+        // Replace with your database connection logic
+        string conStr = "Data Source = 192.168.23.113, 1433; Initial Catalog = test; Persist Security Info = True; User ID = Admin; Password = Passw0rd";
+
+        using (SqlConnection con = new SqlConnection(conStr))
+        {
+            try
+            {
+                await con.OpenAsync();
+
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandText = "SELECT UserName, Passwords FROM Account WHERE UserName = @username";
+                    cmd.Parameters.AddWithValue("@username", username);
+
+                    using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync())
+                        {
+                            string storedPassword = reader.GetString(reader.GetOrdinal("Passwords"));
+                            // Here, you should compare the stored hashed password with the input password using a secure method.
+                            // For simplicity, we'll compare plain text passwords in this example.
+                            if (storedPassword == password)
+                            {
+                                return true; // Authentication successful
+
+                            }
+                            else
+                            {
+                                return false; // Authentication failed
+                            }
+                        }
+                        else
+                        {
+                            return false; // User not found
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle errors
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+    }
+}

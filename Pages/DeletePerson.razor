@@ -1,6 +1,6 @@
 ﻿@page "/delete"
 
-<PageTitle>delete person</PageTitle>
+<PageTitle>Edit person</PageTitle>
 
 <h1>Edit</h1>
 
@@ -11,7 +11,7 @@
             if (!birthday.IsEditing)
             {
                 <tr>
-                    <td>@birthday.Id</td>
+                    <td>@birthday.Id</td>                   
                     <td>@birthday.FName</td>
                     <td>@birthday.Lname</td>
                     <td>@birthday.Birthday.Date.ToString("yyyy-MM-dd")</td>

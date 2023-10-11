@@ -50,7 +50,7 @@ namespace CalendarApp
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "Data Source=192.168.23.113,1433;Initial Catalog=test;Persist Security Info=True;User ID = Admin; Password=Passw0rd";
             con.Open();
-            SqlCommand cmd = new SqlCommand("SelectAll", con);
+            SqlCommand cmd = new SqlCommand("SelectList", con);
             SqlDataReader reader = cmd.ExecuteReader();
             List<Person> Birthdays = new List<Person>();
 

@@ -1,6 +1,7 @@
 ﻿@inherits LayoutComponentBase
-
-<PageTitle>CalendarApp</PageTitle>
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavMan
+<PageTitle>DatingApp</PageTitle>
 
 <div class="page">
     <div class="sidebar">
@@ -9,7 +10,9 @@
 
     <main>
         <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            <button type="button" class="btn btn-primary" @onclick="login">LogIn</button>
+            <button type="button" class="btn btn-primary" @onclick="SignUp">SignUp</button>
+            <button type="button" class="btn btn-primary" @onclick="Logout">LogOut</button>
         </div>
 
         <article class="content px-4">
@@ -17,4 +20,24 @@
         </article>
     </main>
 </div>
+@code{
+    private bool isLoggedIn;
+    private string username;
+    private void login()
+{
+        NavMan.NavigateTo("LogIn");
+}
+    private void SignUp()
+{
+        NavMan.NavigateTo("SignUp");
+}
+    private async Task Logout()
+    {
+        isLoggedIn = false;
+        username = "";
 
+        await JSRuntime.InvokeVoidAsync("localStorage.removeItem", "isLoggedIn");
+        await JSRuntime.InvokeVoidAsync("localStorage.removeItem", "username");
+        NavMan.NavigateTo("/");
+    }
+}

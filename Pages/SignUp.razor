@@ -1,0 +1,80 @@
+﻿
+@page "/SignUp"
+@using CalendarApp.Classes
+@using System.Data.SqlClient
+@using System.Data
+@inject NavigationManager NavMan
+<h3>Add Account</h3>
+
+<div class="form-group">
+    <label for="accountName">First Name</label>
+    <input id="accountName" class="form-control" @bind="newAccount.FName" />
+    <label for="accountName">Last Name</label>
+    <input id="accountName" class="form-control" @bind="newAccount.LName" />
+    <label for="username">Username</label>
+    <input id="username" class="form-control" @bind="newAccount.username" />
+    <label for="password">Password</label>
+    <input id="password" class="form-control" @bind="newAccount.password" />
+    <label for="date">Birthday</label>
+    <input id="Birthday" type="date" @bind="newAccount.date" />
+</div>
+
+
+<button class="btn btn-primary" @onclick="AddAccount">Add Account</button>
+<div class="form-group">
+    <label for="">Already have a Account</label>
+    <button class="btn btn-primary" @onclick="GoLogin">Login</button>
+</div>
+@code {
+
+
+    private Account newAccount = new Account();
+    private void GoLogin()
+    {
+        NavMan.NavigateTo("/LogIn");
+    }
+    private void AddAccount()
+    {
+
+
+        string connectionString = "Data Source = 192.168.23.113, 1433; Initial Catalog = test; Persist Security Info = True; User ID = Admin; Password = Passw0rd";
+
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            using (SqlCommand cmd = new SqlCommand())
+            {
+
+                SqlCommand sql_cmnd = new SqlCommand("AccAdd", connection);
+                sql_cmnd.CommandType = CommandType.StoredProcedure;
+                sql_cmnd.Parameters.AddWithValue("@FName", newAccount.FName);
+                sql_cmnd.Parameters.AddWithValue("@LName", newAccount.LName);
+                sql_cmnd.Parameters.AddWithValue("@Username", newAccount.username);
+                sql_cmnd.Parameters.AddWithValue("@Password", newAccount.password);
+                sql_cmnd.Parameters.AddWithValue("@Birthday", newAccount.date);
+
+
+                int a = sql_cmnd.ExecuteNonQuery();
+                Console.WriteLine(a);
+                if (a >= 1)
+                {
+                    Console.WriteLine("Data added Sucessfully");
+                }
+                else
+                {
+                    Console.WriteLine("Something went wrong. try again");
+                }
+
+
+
+
+            }
+        }
+
+        var message = $"Account '{newAccount.FName}' added to the database.";
+        Console.WriteLine(message);
+
+        newAccount = new Account();
+    }
+}

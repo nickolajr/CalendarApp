@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "CalendarApp/1.0.0": {
         "dependencies": {
-          "Google.Apis.Calendar.v3": "1.62.0.3137",
+          "Google.Apis.Calendar.v3": "1.62.0.3171",
           "System.Data.SqlClient": "4.8.5"
         },
         "runtime": {
@@ -42,15 +42,15 @@
           }
         }
       },
-      "Google.Apis.Calendar.v3/1.62.0.3137": {
+      "Google.Apis.Calendar.v3/1.62.0.3171": {
         "dependencies": {
           "Google.Apis": "1.62.0",
           "Google.Apis.Auth": "1.62.0"
         },
         "runtime": {
           "lib/netstandard2.0/Google.Apis.Calendar.v3.dll": {
-            "assemblyVersion": "1.62.0.3137",
-            "fileVersion": "1.62.0.3137"
+            "assemblyVersion": "1.62.0.3171",
+            "fileVersion": "1.62.0.3171"
           }
         }
       },
@@ -170,12 +170,12 @@
       "path": "google.apis.auth/1.62.0",
       "hashPath": "google.apis.auth.1.62.0.nupkg.sha512"
     },
-    "Google.Apis.Calendar.v3/1.62.0.3137": {
+    "Google.Apis.Calendar.v3/1.62.0.3171": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jeAaBTzGGYFue7ml32rCG4AmqJNeqop+40NT2lIvmlL3xY3/BGeFMtzhqZitep8CxOH+mULz6mVCyXAC5Lp+RA==",
-      "path": "google.apis.calendar.v3/1.62.0.3137",
-      "hashPath": "google.apis.calendar.v3.1.62.0.3137.nupkg.sha512"
+      "sha512": "sha512-BqThhMt6eNne1S1qO6HCjoGwtrs4zeCnbhkLgVYEjzXB8NvlpGu9v8TbhBc7c+BF042p3syGYqo4jobKHk+vQg==",
+      "path": "google.apis.calendar.v3/1.62.0.3171",
+      "hashPath": "google.apis.calendar.v3.1.62.0.3171.nupkg.sha512"
     },
     "Google.Apis.Core/1.62.0": {
       "type": "package",

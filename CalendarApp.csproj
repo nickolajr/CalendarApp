@@ -10,12 +10,40 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <None Remove="Classes\" />
+    <None Remove="AngularCalendar\.editorconfig" />
+    <None Remove="AngularCalendar\README.md" />
+    <None Remove="AngularCalendar\.gitignore" />
+    <None Remove="AngularCalendar\src\favicon.ico" />
+    <None Remove="AngularCalendar\src\index.html" />
+    <None Remove="AngularCalendar\src\main.ts" />
+    <None Remove="AngularCalendar\src\styles.css" />
+    <None Remove="AngularCalendar\src\app\app.component.html" />
+    <None Remove="AngularCalendar\src\app\app-routing.module.ts" />
+    <None Remove="AngularCalendar\src\app\app.component.spec.ts" />
+    <None Remove="AngularCalendar\src\app\app.module.ts" />
+    <None Remove="AngularCalendar\src\app\app.component.ts" />
+    <None Remove="AngularCalendar\src\app\app.component.css" />
+    <None Remove="AngularCalendar\src\app\api\api.component.spec.ts" />
+    <None Remove="AngularCalendar\src\app\api\api.component.css" />
+    <None Remove="AngularCalendar\src\app\api\api.component.html" />
+    <None Remove="AngularCalendar\src\app\api\api.component.ts" />
+    <None Remove="AngularCalendar\src\environments\environment.ts" />
+    <None Remove="AngularCalendar\src\environments\environment.development.ts" />
+    <None Remove="AngularCalendar\src\assets\.gitkeep" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Apis.Calendar.v3" Version="1.62.0.3137" />
+    <PackageReference Include="Google.Apis.Calendar.v3" Version="1.62.0.3171" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="AngularCalendar\tsconfig.app.json" />
+    <Content Remove="AngularCalendar\angular.json" />
+    <Content Remove="AngularCalendar\package-lock.json" />
+    <Content Remove="AngularCalendar\package.json" />
+    <Content Remove="AngularCalendar\tsconfig.json" />
+    <Content Remove="AngularCalendar\tsconfig.spec.json" />
   </ItemGroup>
 </Project>
