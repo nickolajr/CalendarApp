@@ -1,6 +1,8 @@
 ﻿@inherits LayoutComponentBase
 @inject IJSRuntime JSRuntime
 @inject NavigationManager NavMan
+@using CalendarApp.Classes
+@inject Authenticastion.AuthService AuthService
 <PageTitle>DatingApp</PageTitle>
 
 <div class="page">
@@ -10,9 +12,15 @@
 
     <main>
         <div class="top-row px-4">
-            <button type="button" class="btn btn-primary" @onclick="login">LogIn</button>
-            <button type="button" class="btn btn-primary" @onclick="SignUp">SignUp</button>
-            <button type="button" class="btn btn-primary" @onclick="Logout">LogOut</button>
+            @if (AuthService.IsLoggedIn == true)
+                {
+                <button type="button" class="btn btn-primary" @onclick="Logout">LogOut</button>
+                }
+                else
+                {
+            <button type="button" class="btn btn-primary" @onclick="Gologin">LogIn</button>
+            <button type="button" class="btn btn-primary" @onclick="GoSignUp">SignUp</button>
+                }
         </div>
 
         <article class="content px-4">
@@ -23,17 +31,20 @@
 @code{
     private bool isLoggedIn;
     private string username;
-    private void login()
-{
+
+    private void Gologin()
+    {
+
         NavMan.NavigateTo("LogIn");
-}
-    private void SignUp()
-{
+    }
+    private void GoSignUp()
+    {
         NavMan.NavigateTo("SignUp");
-}
+    }
     private async Task Logout()
     {
-        isLoggedIn = false;
+
+        AuthService.IsLoggedIn = false;
         username = "";
 
         await JSRuntime.InvokeVoidAsync("localStorage.removeItem", "isLoggedIn");

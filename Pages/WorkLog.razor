@@ -4,9 +4,49 @@
 @using System.Data.SqlClient
 @using System.Data
 @inject NavigationManager NavMan
+@inject Authenticastion.AuthService authservice
 <h3>WorkLog</h3>
+@if (authservice.IsLoggedIn)
+    {
+<h2>@date.currentdate.ToShortDateString()</h2>
+
+<div>
+<label>Select start time:</label>
+<input id="StartTime" type="time" @bind="worklog.StartTime" />
+</div>
+<div>
+<label>input what u worked on:</label>
+<input id="Title" itemtype="http://schema.org/Event" @bind="worklog.Title" />
+</div>
+<div>
+    <label>write a description of what you did:</label>
+    </div>
+<div>
+    <textarea id="Desc" itemtype="http://schema.org/UserComments" @bind="worklog.Descs" />
+</div>
+<div>
+    <label>When did you stop working on it:</label>
+    <input id="EndTime" type="time" @bind="worklog.EndTime" />
+</div>
+<div>
+    <button class="btn btn-primary" @onclick="Send">Send</button>
+</div>
+    }
+else { <div>
+
+      <h2>plz login</h2>
+      </div>}
+
 
 @code {
-
-
+    Date date = new Date();
+    workLog worklog = new workLog();
+    Sql sql = new Sql();
+    
+    public void Send()
+{
+        
+        sql.WorkLog(authservice,worklog);
+        worklog = new workLog();
+}
     }

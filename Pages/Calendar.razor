@@ -2,7 +2,6 @@
 @using CalendarApp.Classes
 @inject IJSRuntime JSRuntime
 
-
 <h1 class="H">Holidays in the Next 7 Days</h1>
 <table class="Table">
     <thead class="Thead">
@@ -17,33 +16,74 @@
         {
             <tr>
                 <td>@date.currentdate.AddDays(days).ToLongDateString()</td>
-                @foreach (var holiday in holidays)
-                {
-                    DateTime eventday = holiday.Start.Date; 
-                    DateTime currentDay = date.currentdate.AddDays(days).Date; 
-                    if (eventday == currentDay)
+                <td>
+                    
+                    @foreach (var holiday in holidays)
                     {
-                        <td>@holiday.Event</td>
+                        DateTime eventday = holiday.Start.Date;
+                        DateTime currentDay = date.currentdate.AddDays(days).Date;
+                        if (eventday == currentDay)
+                        {
+                            @holiday.Event<br />
+                        }
                     }
-                }
-                @foreach (var birthday in Birthdays)
-                {
-
-                    DateTime Bday = birthday.Birthday.Date; 
-                    DateTime currentDay = date.currentdate.AddDays(days).Date; 
-                    if (Bday.Month == currentDay.Month&&Bday.Day==currentDay.Day)
+                    @foreach (var birthday in Birthdays)
                     {
-                        <td>@birthday.FName @birthday.Lname's Birthday. </td>
+                        DateTime Bday = birthday.Birthday.Date;
+                        DateTime currentDay = date.currentdate.AddDays(days).Date;
+                        if (Bday.Month == currentDay.Month && Bday.Day == currentDay.Day)
+                        {
+                            @($"{birthday.FName} {birthday.Lname}'s Birthday.")<br />
+                        }
                     }
+                </td>
+                <td>
 
-                }
+                    @if (!worklog.IsOpen)
+                    {
+                        <button class="btn btn-primary" @onclick="()=>OpenWorklog(date.currentdate.AddDays(days))">Open</button>
+                    }
+                    else
+                    {
+                        @foreach (var work in workLogs)
+                        {
+                            DateTime workday = work.Cday.Date;
+                            DateTime currentDay = date.currentdate.AddDays(days).Date;
+                            if (work.Cday.Month == currentDay.Month && work.Cday.Day == currentDay.Day && work.Cday.Year == currentDay.Year)
+                            {
+                                <div>
+                                    @if (!open)
+                                    {
+
+                                    @($"{work.FName} {work.LName}") <button class="btn btn-primary" @onclick="() => worklogs()">worklogs</button> <br />
+
+                                    }
+                                    else
+                                    {
+                                    if (!opendesc)
+                                    {
+                                    @($"they started at_{work.StartTime.ToShortTimeString()}_ with_{work.Title}_and stopped at_{work.EndTime.ToShortTimeString()}")<button class="btn btn-primary" @onclick="() => odesc()">Description</button><br />
+                                    }
+                                    else
+                                    {
+                                    @($"{work.Descs}")<br />
+                                    }
+                                    }
+
+
+
+                                    <button class="btn btn-primary" @onclick="()=>close()">Close</button>
+                                </div>
+                        }
+                    }
+                    }
+                </td>
             </tr>
         }
     </tbody>
 </table>
 
 @code {
-
     string FName;
     string Lname;
     DateTime Bday;
@@ -52,21 +92,40 @@
     Api apis = new Api();
     Sql sql = new Sql();
     Person person = new Person();
-
+    workLog worklog = new workLog();
+    bool open = false;
+    bool opendesc = false;
+    // @($"{work.FName}_{work.LName}__Started at:{work.StartTime.ToShortTimeString()}__worked with:{work.Title}__{work.Descs}Stopped at:{work.EndTime.ToShortTimeString()}")<br />
     private void UpdatePerson()
     {
         sql.SqlAdd(person);
-        LoadBirthdays(); 
+        LoadBirthdays();
     }
-
-
-
-
-
+    private void close()
+    {
+        worklog.IsOpen = false;
+        open = false;
+        opendesc = false;
+    }
+    private void OpenWorklog(DateTime selectedDate)
+    {
+        worklog.IsOpen = true;
+    }
+    private void worklogs()
+    {
+        open = true;
+    }
+    private void odesc()
+    {
+        opendesc = true;
+    }
+    private List<workLog> workLogs = new List<workLog>();
     private List<Person> Birthdays = new List<Person>();
     private List<Holiday> holidays = new List<Holiday>();
     private bool holidaysLoaded = false;
     private bool BirthdaysLoaded = false;
+    private bool WorkLogsLoaded = false;
+
     protected override async Task OnInitializedAsync()
     {
         if (!BirthdaysLoaded)
@@ -79,14 +138,25 @@
             await LoadHolidays();
             holidaysLoaded = true;
         }
+        if (!WorkLogsLoaded)
+        {
+            await LoadWorkLogs();
+            WorkLogsLoaded = true;
+        }
     }
 
     private async Task LoadHolidays()
     {
         holidays = await Api.GetHolidays();
     }
+
     private async Task LoadBirthdays()
     {
         Birthdays = await Sql.SqlSelect();
+    }
+
+    private async Task LoadWorkLogs()
+    {
+        workLogs = await Sql.selectworklog();
     }
 }
